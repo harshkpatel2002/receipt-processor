@@ -111,7 +111,7 @@ fn time_check(time_str: &str) -> bool {
     {
         if let (Ok(hour), Ok(minute)) = (hour.parse::<u32>(), minute.parse::<u32>()) {
             return (hour == 14 && minute >= 0)
-                || (hour == 15 && minute == 0)
+                || (hour == 15 && minute >= 0)
                 || (hour == 16 && minute == 0);
         }
     }
